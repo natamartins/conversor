@@ -8,11 +8,10 @@ import { converteMoedas } from "../action/index";
 class Formulario extends Component {
   constructor(props) {
     super(props);
-
     this.onValueChange = this.onValueChange.bind(this);
     this.onValueDeChange = this.onValueChange.bind(this);
     this.onValueParaChange = this.onValueChange.bind(this);
-    this.envia = this.onValueChange.bind(this);
+    this.envia = this.envia.bind(this);
 
     this.state = {
       de: "",

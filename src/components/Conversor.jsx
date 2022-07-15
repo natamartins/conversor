@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import Formulario from "./Formulario";
 
 const Conversor = (props) => {
+  console.log("props", props);
   return (
     <div className="content">
       <div className="row justify-content-md-center">
@@ -12,8 +13,10 @@ const Conversor = (props) => {
             <Formulario />
           </div>
           <div className="card-footer text-light bg-dark">
-            {props.conversor.quotes &&
-              props.conversor.quotes[Object.keys(props.conversor.quotes)[0]]}
+            <span>
+              {props.conversor.quotes &&
+                props.conversor.quotes[Object.keys(props.conversor.quotes)[0]]}
+            </span>
           </div>
         </div>
       </div>
